@@ -1,0 +1,41 @@
+$ball: 4;
+$backgroundColor: #4d648d;
+$ballColor: #d0e1f9;
+
+body {
+  background: $backgroundColor;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.ball {
+  background-color: $ballColor;
+  position: relative;
+  border-radius: 50%;
+  width: 10vh;
+  height: 10vh;
+  transition: width 2s, height 2s;
+  @for $i from 1 through $ball {
+    &:nth-child(#{$i}) {
+      animation: jump 2s alternate ease-out infinite;
+      animation-delay: #{$i * 0.6}s;
+    }
+  }
+}
+
+.ball:hover {
+  width: 5vh;
+  height: 5vh;
+}
+
+@keyframes jump {
+  70% {
+    transform: translate(0px, -20vh);
+  }
+  100% {
+    transform: translate(0px, -20vh);
+  }
+}

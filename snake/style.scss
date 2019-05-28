@@ -1,0 +1,24 @@
+$backgroundColor: #009688;
+
+body {
+  background: $backgroundColor;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.score {
+  display: inline;
+  margin-left: 10px;
+  font-size: 40px;
+  color: #ffffff;
+  font-family: "Georgia";
+}
+
+canvas {
+  height: 400px;
+  width: 400px;
+  display: flex;
+}
